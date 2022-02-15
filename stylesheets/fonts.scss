@@ -1,0 +1,71 @@
+$baseFonts: Helvetica, Segoe UI, sans-serif;
+
+$fontFamilyMonserrat: Montserrat, $baseFonts;
+$fontFamilyRoboto: Roboto, $baseFonts;
+
+@mixin declareKiraFont($fontName, $fontFamily, $fontStyle, $fontWeight, $fontSize, $fontLineHeight, $fontLetterSpacing)
+{
+  :root {
+    --kr-font-#{$fontName}-font-family: #{$fontFamily};
+    --kr-font-#{$fontName}-font-style: #{$fontStyle};
+    --kr-font-#{$fontName}-font-weight: #{$fontWeight};
+    --kr-font-#{$fontName}-font-size: #{$fontSize};
+    --kr-font-#{$fontName}-line-height: #{$fontLineHeight};
+    --kr-font-#{$fontName}-letter-spacing: #{$fontLetterSpacing};
+  }
+
+  .kr-font-#{$fontName}
+  {
+    font-family: var(--kr-font-#{$fontName}-font-family);
+    font-style: var(--kr-font-#{$fontName}-font-style);
+    font-weight: var(--kr-font-#{$fontName}-font-weight);
+    font-size: var(--kr-font-#{$fontName}-font-size);
+    line-height: var(--kr-font-#{$fontName}-line-height);
+    letter-spacing: var(--kr-font-#{$fontName}-letter-spacing);
+  }
+}
+
+@include declareKiraFont(
+                navigation,
+                $fontFamilyMonserrat, normal, 500, 14px, 20px, inherit
+);
+
+@include declareKiraFont(
+                caption,
+                $fontFamilyRoboto, normal, normal, 13px, 16px, inherit
+);
+
+@include declareKiraFont(
+                button,
+                $fontFamilyRoboto, normal, 500, 18px, 20px, inherit
+);
+
+@include declareKiraFont(
+                body-1,
+                $fontFamilyRoboto, normal, normal, 24px, 32px, inherit
+);
+
+@include declareKiraFont(
+                body-2,
+                $fontFamilyRoboto, normal, normal, 16px, 24px, inherit
+);
+
+@include declareKiraFont(
+                h1,
+                $fontFamilyMonserrat, normal, bold, 56px, 72px, inherit
+);
+
+@include declareKiraFont(
+                h2,
+                $fontFamilyMonserrat, normal, bold, 50px, 56px, inherit
+);
+
+@include declareKiraFont(
+                h3,
+                $fontFamilyMonserrat, normal, bold, 36px, 48px, -0.32px
+);
+
+@include declareKiraFont(
+                h4,
+                $fontFamilyMonserrat, normal, bold, 18px, 20px, inherit
+);

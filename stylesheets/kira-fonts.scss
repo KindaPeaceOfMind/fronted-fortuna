@@ -1,0 +1,8 @@
+@mixin kiraFont($fontName) {
+  font-family: var(--kr-font-#{$fontName}-font-family);
+  font-style: var(--kr-font-#{$fontName}-font-style);
+  font-weight: var(--kr-font-#{$fontName}-font-weight);
+  font-size: var(--kr-font-#{$fontName}-font-size);
+  line-height: var(--kr-font-#{$fontName}-line-height);
+  letter-spacing: var(--kr-font-#{$fontName}-letter-spacing);
+}
